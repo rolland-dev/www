@@ -1,0 +1,154 @@
+body{
+    font-family: 'source code pro', cursiva, serif;
+    margin: 0px;
+    padding: 0px;
+    width: 1024px;
+    box-sizing: border-box;
+    margin: auto;
+  }
+  
+  /* DEFINITION ET MISE EN FORME MENU ET SOUS MENU */
+  /* MENU PRINCIPAL */
+  nav > ul{
+    margin: 0px;
+    padding: 0px;
+    border-radius: 10px;
+  }
+  
+  nav > ul > li{
+    float: left;
+    position: relative;
+    border-radius: 10px;
+  }
+  
+  nav li{
+    list-style-type: none;
+  }
+  
+  nav{
+    width: 100%;
+    background-color: #424558;
+    border-radius: 10px;
+  }
+  
+  nav > ul::after{
+    content: "";
+    display: block;
+    clear: both;
+  }
+  
+  nav a {
+    display: inline-block;
+    text-decoration: none;
+  }
+  
+  nav > ul > li > a{
+    padding: 20px 30px;
+    color: #fff;
+    border-radius: 10px;
+  }
+  
+  /* SOUS MENU */
+  .sousmenu{
+    display: none;
+  }
+  
+  nav li:hover .sousmenu{
+    display: inline-block;
+    position: absolute;
+    top: 100%;
+    left: 0px;
+    padding: 0px;
+    z-index: 100000;
+    border-radius: 10px;
+  }
+  .sousmenu li{
+    border-bottom: 1px solid black;
+    border-radius: 10px;
+  }
+  
+  .sousmenu li a{
+    padding: 15px 30px;
+    font-size: 13px;
+    color: #222538;
+    width: 270px;
+    border-radius: 10px;
+  
+  }
+  
+  /* ACTION SUR LES MENU */
+  .menu-stock:hover{
+    border-top: 5px solid #e44d26;
+    background-color: rgba(228,77,38,0.15);
+    border-radius: 10px;
+  
+  }
+  
+  .menu-entree:hover{
+    border-top: 5px solid #0070bb;
+    background-color: rgba(000,112,192,0.15);
+  }
+  
+  .menu-sortie:hover{
+    border-top: 5px solid #f1dc4f;
+    background-color: rgba(241,211,79,0.15);
+  }
+  
+  .menu-location:hover{
+    border-top: 5px solid #bbb;
+    background-color: rgba(220,220,220,0.15);
+  }
+  
+  .accueil:hover{
+    border-top: 5px solid rgb(131, 128, 128);
+    background-color: rgba(220,220,220,0.15);
+  }
+  nav > ul > li:hover a{
+    padding: 15px 30px 20px 30px;
+  }
+  
+  /* ACTION SUR LES SOUS MENU */
+  .menu-stock .sousmenu{
+    background-color: #e44d26;
+  }
+  
+  .menu-entree .sousmenu{
+    background-color: #0070bb;
+  }
+  
+  .menu-sortie .sousmenu{
+    background-color: #f1dc4f;
+  }
+  
+  .menu-location .sousmenu{
+    background-color: #bbb;
+  }
+  
+  .sousmenu li:hover a{
+    color: #eee;
+    font-weight: bold;
+  }
+  
+  .menu-stock .sousmenu li:hover{
+    background-color: rgb(210,77,60);
+  }
+  
+  .menu-entree .sousmenu li:hover{
+    background-color: rgb(000,115,200);
+  }
+  
+  .menu-sortie .sousmenu li:hover{
+    background-color: rgb(200,165,75);
+  }
+  
+  .menu-location .sousmenu li:hover{
+    background-color: rgb(220,200,170);
+  }
+  
+  
+  /* MISE EN FORME DES TITRES DE PAGES */
+  h2
+  {
+      text-align: center;
+      padding: 20px;
+      border-radius: 10px;

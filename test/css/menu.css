@@ -1,0 +1,14 @@
+a.nav-link {
+    margin: 5px;
+    padding-bottom: 5px !important;
+    color: black !important;
+}
+
+body {
+    background-color: coral;
+}
+
+a.nav-link:hover {
+    border-bottom: 3px solid black !important;
+    transition: border-width 0.4s linear;
+}

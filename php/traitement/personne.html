@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <title>exo php04</title>
+    <style>
+        .control-label {
+            color: rgba(100, 110, 197, 0.877)
+        }
+        .myform{
+            background-color:rgb(210, 237, 250);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+
+        <div class="row">
+            <div class="offset-3 col-md-6 myform">
+                <form class="form-horizontal" action="personne2.php" method="post">
+                    <fieldset>
+
+                        <!-- Form Name -->
+                        <legend>Informations</legend>
+
+                        <!-- Text input-->
+                        <div class="form-group">
+                            <label class="col-md-12 control-label" for="nom">Nom :</label>
+                            <div class="col-md-12">
+                                <input id="nom" name="nom" type="text" placeholder="entrez votre nom s.v.p..."
+                                    class="form-control input-md" required="">
+                            </div>
+                        </div>
+
+                        <!-- Text input-->
+                        <div class="form-group">
+                            <label class="col-md-12 control-label" for="prenom">Prénom :</label>
+                            <div class="col-md-12">
+                                <input id="prenom" name="prenom" type="text" placeholder="entrez votre prénom s.v.p..."
+                                    class="form-control input-md" required="">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <!-- Multiple Radios (inline) -->
+                                <div class="form-group">
+                                    <label class="col-md-12 control-label" for="choix_sexe">Sexe :</label>
+                                    <div class="col-md-12">
+                                        <label class="radio-inline" for="choix_sexe-0">
+                                            <input type="radio" name="choix_sexe" id="choix_sexe-0" value="Homme" checked="checked">
+                                            Homme
+                                        </label>
+                                        <label class="radio-inline" for="choix_sexe-1">
+                                            <input type="radio" name="choix_sexe" id="choix_sexe-1" value="Femme">
+                                            Femme
+                                        </label>
+                                        <label class="radio-inline" for="choix_sexe-1">
+                                            <input type="radio" name="choix_sexe" id="choix_sexe-1" value="Autre">
+                                            Autre
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <!-- Checkboxes -->
+                                <div class="form-group">
+                                    <div class="col-md-12">
+                                        <div class="checkbox">
+                                            <label class="col-md-12 control-label" for="statut_marital">Statut marital
+                                                :</label>
+                                            <div class="col-md-12">
+                                                <input type="checkbox" name="statut_marital" id="statut_marital" value="Marié(e)"
+                                                    checked> Marié(e)
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+                        <!-- Password input-->
+                        <div class="form-group">
+                            <label class="col-md-12 control-label" for="mot_de_passe">Mot de passe :</label>
+                            <div class="col-md-12">
+                                <input id="mot_de_passe" name="mot_de_passe" type="password"
+                                    placeholder="entrez le mot de passe s.v.p..." class="form-control input-md"
+                                    required="">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <!-- Select Basic -->
+                            <div class="col-md-6">
+                                <div class="form-group" class="col-md-12">
+                                    <label class="col-md-12 control-label" for="passion_pref">Passion préférée :</label>
+                                    <div class="col-md-12">
+                                        <select id="passion_pref" name="passion_pref" class="form-control">
+                                            <option value="Dessin">Dessin</option>
+                                            <option value="Musique">Musique</option>
+                                            <option value="Voyage">Voyage</option>
+                                            <option value="Sciences">Sciences</option>
+                                            <option value="Espace">Espace</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Select Multiple -->
+                            <div class="col-md-6">
+                                <div class="form-group" class="col-md-12">
+                                    <label class="col-md-12 control-label" for="passes_temps">Passes-temps</label>
+                                    <div class="col-md-12">
+                                        <select id="passes_temps" name="passes_temps[]" class="form-control" multiple="multiple">
+                                            <option value="lire">lire</option>
+                                            <option value="danser">danser</option>
+                                            <option value="courrir">courrir</option>
+                                            <option value="chanter">chanter</option>
+                                            <option value="dormir">dormir</option>
+                                            <option value="se promener">se promener</option>
+                                            <option value="manger">manger</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Button -->
+                        <div class="form-group">
+                            <label class="col-md-12 control-label" for="btnSubmit"></label>
+                            <div class="col-md-12">
+                                <button id="btnSubmit" name="btnSubmit" class="btn btn-primary" value="Envoyer"
+                                    type="submit">Envoyer</button>
+                            </div>
+                        </div>
+
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</body>
+
+</html>
+
+
