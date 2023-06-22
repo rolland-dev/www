@@ -7,6 +7,11 @@ $_SESSION['role']='';
 
 require_once ('./php/protection.php');
 
+if(isset($_POST['captcha'])){
+    // si captcha ok
+    if($_POST['captcha']==$_SESSION['code']){
+        
+     
 $erreur='';
 
 if(isset($_POST['login'])){
@@ -33,22 +38,30 @@ $sql = "SELECT * FROM users";
 if ($result = mysqli_query($link, $sql)) {
     if (mysqli_num_rows($result) > 0) {
         while ($row = mysqli_fetch_array($result)) {
-           
-                if ($login_ok == $row['mail'] && (password_verify($password_ok,$row['mdp']))) {
-                    $_SESSION['login']="yes";
-                    $_SESSION['nom']=$row['mail'];
-                    $_SESSION['role']=$row['ROLE'];
-                    $valide="ok";
-                    header('location:index.php');
-                    exit();
-                }
-               
+
+            if ($login_ok == $row['mail'] && (password_verify($password_ok, $row['mdp']))) {
+                $_SESSION['login']="yes";
+                $_SESSION['nom']=$row['mail'];
+                $_SESSION['role']=$row['ROLE'];
+                $valide="ok";
+                header('location:index.php');
+                exit();
+            }
+
         }
-        if($valide !="ok"){
+        if($valide !="ok") {
             $_SESSION['erreur'].= "Login ou mot de passe incorrect !!!";
             header('location:login.php');
             exit();
         }
     }
+    $_SESSION['erreurCaptcha']="";
+}
+}
+else {
+    // si erreur de captcha
+    header('Location: ./login.php');
+    $_SESSION['erreurCaptcha']="Erreur Captcha !!!";
+}
 }
 ?>

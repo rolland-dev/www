@@ -21,6 +21,7 @@ if(isset($_SESSION['login'])){
   }else{
     $erreur='';
   }
+ 
 ?>
 
 <!DOCTYPE html>
@@ -36,6 +37,8 @@ if(isset($_SESSION['login'])){
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     <link rel="stylesheet" href="./css/menu.css">
     <link rel="stylesheet" href="../css/style.css">
+
+  
 </head>
 <style>
         .wrapper{
@@ -125,8 +128,15 @@ if(isset($_SESSION['login'])){
                 </div>
             </div>        
         </div>
+
+        
     </div>
+    <?php require_once './php/fct.php'; ?>
+    <button id="click">Click</button>
     <?php include './php/footer.php' ?>
+
+
+ 
 </body>
 
 </html>

@@ -1,0 +1,26 @@
+/* définition de variables  */
+$color-base: #c6538c;
+
+$black: #000 !default;
+$border-radius: 0.25rem !default;
+$box-shadow: 0 0.5rem 1rem rgba($black, 0.15) !default;
+
+/* reset body */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: $color-base;
+}
+
+code {
+  border-radius: $border-radius;
+  box-shadow: $box-shadow;
+}
+
+@debug calc(400px + 10%); // calc(400px + 10%)
+@debug calc(400px / 2); // 200px
+@debug min(100px, calc(1rem + 10%)); // min(100px, 1rem + 10%)
